@@ -1,0 +1,23 @@
+input{
+    padding: 8px
+}
+
+label{
+    padding: 7px;
+}
+
+label[for="email"], button{
+    margin-left: 20px ;
+}
+
+button{
+    align-self: center;
+   
+}
+
+.new-student{
+    background-color: #262930;
+    padding: 25px;
+    color: #bab9b9;
+    
+}

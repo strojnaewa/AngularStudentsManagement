@@ -1,0 +1,15 @@
+<div class="new-student">
+    <h3>Dodaj nowego studenta</h3>
+    <label for="name">Imię i nazwisko:</label>
+    <input type="text" id="name" #name>
+  
+    <label for="email">Adres e-mail:</label>
+    <input type="email" id="email" #email>
+
+    <label for="username">Username:</label>
+    <input type="username" id="username" #username>
+  
+  
+    <button class="button button-green" 
+    (click)="add(name.value, email.value, username.value); name.value=''; email.value=''; username.value=''">Dodaj</button>
+  </div>

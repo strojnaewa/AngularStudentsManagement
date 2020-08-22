@@ -1,1 +1,199 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap');
+
+
 /* You can add global styles to this file, and also import other style files */
+/* Ustalenie właściwości "box-sizing" dla wszystkich elementów */
+
+/* * {
+    box-sizing: border-box;   Z tą opcja mamy kwadrat 100x100px, bez tego 140 x 140 px
+   }
+   
+   div {
+       
+       width: 100px;
+       height: 100px;
+       padding: 40px 40px;
+       background-color: red;
+   } */
+
+   
+* {
+    box-sizing: border-box;
+  }
+  
+
+  /* Właściwości dla body */
+  body {
+    font-family:'Montserrat', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+    height: 100vh;
+    
+    
+   
+  }
+
+  app-root {
+     /*wyswietlamy footer na dole*/ 
+     display:flex;
+     flex-direction: column;
+     /*rozciagamy body na 100% okna*/ 
+     height: 100%;
+  }
+  
+
+  
+
+/*nagłówki*/
+h3, h1{
+  text-transform: uppercase;
+  font-weight: normal;
+  border-bottom: 2px solid white;
+}
+
+header {
+  padding-top: 20px;
+  padding-bottom: 15px;
+  background: #262930;
+  color: #ffffff;
+}
+
+header h1 {
+  margin: 0;
+}
+
+
+
+
+  /* Klasa kontenera, która ma ograniczoną szerokość i wyśrodkowuje content */
+  /* Ustawienie lewego i prawego marginesu na "auto" wyśrodkowuje kontener */
+  .container {
+    margin: 0 auto ;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    width: 100%;
+  }
+  
+  /* Tabele */
+  table {
+    width: 100%;
+  }
+  table th,
+  table td {
+    padding: 8px;
+    text-align: left;
+  }
+  /* Cieniujemy co drugi (parzysty) wiersz tabeli */
+  /* Używamy tbody, aby upewnić się, że nie cieniujemy nagłówka - to zachowuje kolejność cieniowania */
+  table tbody > tr:nth-child(odd) {
+    background: #ADD9D1;
+    
+  }
+  
+  /* Przyciski */
+  .button {
+    display: inline-block;
+    margin: 2px 15px;
+    padding: 12px 25px 14px;
+    border: 0;
+    background: #999999;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0,7s;
+  }
+  /* Przycisk po najechaniu kursorem */
+  .button:hover {
+    background: #888888;
+    color: white
+    
+  }
+  /* Przycisk w stanie aktywnym */
+  .button:active,
+  .button:focus {
+    background: #777777;
+  }
+  
+  /* Przycisk w kolorze zielonym */
+  .button-green {
+    background: #44A69C;
+    
+  }
+  .button-green:hover {
+    background: #3E8C84;
+  }
+  .button-green:active,
+  .button-green:focus {
+    background: #22aa44;
+  }
+  
+  /* Przycisk w kolorze czerwonym */
+  .button-red {
+    background:#e74c3c;
+  }
+  .button-red:hover {
+    background: #80838d;
+  }
+  .button-red:active,
+  .button-red:focus {
+    background: #80838d;
+  }
+
+  /*formularze*/
+input{
+  height: 44px;
+  width: 160px;
+border: 1px solid #cecece;
+font-size: 18px;
+color: #262930;
+padding-right: 5px;
+padding-left: 5px;
+
+}
+input:active, input:focus{
+  border: 1px solid #e74c3c;
+  outline: 0;
+}
+
+  /*linki*/
+
+  a{
+    color: #777777;
+    text-decoration:none;
+    transition: all 0,3s;
+  }
+
+  a:hover{
+    color:#e74c3c
+  }
+  /* Footer */
+footer {
+  background: #262930;
+  color: #bab9b9;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: center;
+  flex: 0;
+}
+
+main{
+  flex-grow: 1;
+}
+  /* Media Query dla urządzeń o minimalnej szerokości 992px */
+  /* czyli dla komputerów stacjonarnych */
+  /* ustawienia dla urządzeń mobilnych poniżej jakiejśc szer. ekranu*/
+  @media (min-width: 992px) {
+    .container {
+      max-width: 60%;
+    }
+
+    .button{
+      color: white;
+    }
+
+    
+  }
